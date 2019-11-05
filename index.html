@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <script src="./dist/MVVM.js"></script>
+    <body>
+        <div id='app' a='1'>
+                {{message}} message
+            <div test='2'>{{message}}</div>
+            <div v-text='name'></div>
+            <div>{{phone}}</div>
+            <input type="text" v-model='phone'>
+            <div v-text='age'></div>
+        </div>
+    </body>
+    <script>
+        var app=new MVVM({
+            el:'#app',
+            data:{
+                message:'welcome to MVVM',
+                name:'jiexi解析',
+                phone:15989898765,
+                age:1,
+            }
+        })
+    </script>
+</html>
